@@ -1,0 +1,369 @@
+/* Magical Candy Land Background */
+.game-container {
+    -fx-background-color: linear-gradient(to bottom, #FF9AFF, #FF6BB5, #FF8EFF);
+    -fx-padding: 20px;
+    -fx-background-repeat: repeat, repeat;
+    -fx-background-size: 100px 100px, 60px 60px;
+    -fx-animation: floatBackground 20s linear infinite, sparkle 2s linear infinite, colorPulse 10s alternate infinite;
+}
+
+@keyframes floatBackground {
+    0% { -fx-background-position: 0 0, 0 0; }
+    100% { -fx-background-position: 200px 200px, 100px 100px; }
+}
+
+@keyframes sparkle {
+    0%, 100% { -fx-opacity: 0.4; }
+    50% { -fx-opacity: 1; }
+}
+
+@keyframes colorPulse {
+    0% { -fx-background-color: linear-gradient(to bottom, #FF9AFF, #FF6BB5, #FF8EFF); }
+    50% { -fx-background-color: linear-gradient(to bottom, #B5FFFC, #FFDEE9, #B5FFFC); }
+    100% { -fx-background-color: linear-gradient(to bottom, #FFDEE9, #B5FFFC, #FFDEE9); }
+}
+
+/* Bouncy Castle Container */
+.level-selection-box {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-background-radius: 70;
+    -fx-padding: 50px;
+    -fx-border-color: #FF00FF;
+    -fx-border-width: 6px;
+    -fx-border-radius: 70;
+    -fx-effect: dropshadow(three-pass-box, rgba(255, 0, 255, 0.6), 30, 0.5, 0, 20);
+    -fx-animation: bounce 3s ease-in-out infinite, rotate 20s linear infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { -fx-translate-y: 0; }
+    50% { -fx-translate-y: -20px; }
+}
+
+@keyframes rotate {
+    0% { -fx-rotate: 0deg; }
+    100% { -fx-rotate: 360deg; }
+}
+
+/* Super Happy Fun Buttons */
+.level-button {
+    -fx-font-size: 38px;
+    -fx-font-family: 'Comic Sans MS', 'Marker Felt', 'Chalkboard SE', cursive;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 30px 50px;
+    -fx-background-radius: 50px 20px 50px 20px;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 15, 0.4, 0, 8);
+    -fx-animation: dance 4s ease-in-out infinite;
+    -fx-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+
+@keyframes dance {
+    0%, 100% {
+        -fx-rotate: 0deg;
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+        -fx-translate-y: 0;
+    }
+    25% {
+        -fx-rotate: 5deg;
+        -fx-scale-x: 1.1;
+        -fx-scale-y: 0.9;
+        -fx-translate-y: -10px;
+    }
+    50% {
+        -fx-rotate: -5deg;
+        -fx-scale-x: 0.9;
+        -fx-scale-y: 1.1;
+        -fx-translate-y: 0;
+    }
+    75% {
+        -fx-rotate: 5deg;
+        -fx-scale-x: 1.05;
+        -fx-scale-y: 0.95;
+        -fx-translate-y: -5px;
+    }
+}
+
+.level-button.easy {
+    -fx-background-color: radial-gradient(center 30% 30%, radius 150%, #4CAF50, #81C784, #C8E6C9);
+    -fx-text-fill: #FFFF00;
+    -fx-animation-delay: 0.1s;
+}
+.level-button.medium {
+    -fx-background-color: radial-gradient(center 30% 30%, radius 150%, #FFC107, #FFD54F, #FFF176);
+    -fx-text-fill: #FF00FF;
+    -fx-animation-delay: 0.2s;
+}
+.level-button.hard {
+    -fx-background-color: radial-gradient(center 30% 30%, radius 150%, #F44336, #EF9A9A, #FFCDD2);
+    -fx-text-fill: #00FFFF;
+    -fx-animation-delay: 0.3s;
+}
+.level-button.locked {
+    -fx-background-color: radial-gradient(center 30% 30%, radius 150%, #9E9E9E, #BDBDBD, #E0E0E0);
+    -fx-text-fill: #FFD700;
+    -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.7), 15, 0.5, 0, 8);
+    -fx-animation: shake 0.8s ease-in-out infinite, glow 2s alternate infinite;
+}
+
+@keyframes glow {
+    0%, 100% { -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.7), 15, 0.5, 0, 8); }
+    50% { -fx-effect: dropshadow(three-pass-box, rgba(255,215,0,0.9), 25, 0.8, 0, 15); }
+}
+
+.level-button:hover {
+    -fx-scale-x: 1.3;
+    -fx-scale-y: 1.3;
+    -fx-rotate: 10deg;
+    -fx-effect: dropshadow(three-pass-box, rgba(255,255,255,0.9), 30, 1, 0, 15);
+    -fx-text-fill: #FFFFFF;
+    -fx-animation: none;
+}
+
+/* Super Star Button */
+.back-button {
+    -fx-shape: "M 50 10 L 60 40 L 90 40 L 65 60 L 75 90 L 50 70 L 25 90 L 35 60 L 10 40 L 40 40 Z";
+    -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #FFEB3B, #FFC107, #FFD600);
+    -fx-border-color: #FF00FF;
+    -fx-border-width: 4px;
+    -fx-padding: 25px;
+    -fx-effect: dropshadow(three-pass-box, #000, 15, 0.7, 0, 8);
+    -fx-animation: spin 3s linear infinite, pulseGlow 1.5s ease-in-out infinite;
+    -fx-cursor: hand;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        -fx-effect: dropshadow(three-pass-box, #FFD700, 15, 0.8, 0, 0);
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+    }
+    50% {
+        -fx-effect: dropshadow(three-pass-box, #FFD700, 30, 1, 0, 0);
+        -fx-scale-x: 1.1;
+        -fx-scale-y: 1.1;
+    }
+}
+
+.back-button:hover {
+    -fx-scale-x: 1.4;
+    -fx-scale-y: 1.4;
+    -fx-effect: dropshadow(three-pass-box, #FF00FF, 30, 1, 0, 0);
+    -fx-animation: spin 1s linear infinite, pulseGlow 0.7s ease-in-out infinite;
+}
+
+/* Comic Explosion Text */
+.question-text {
+    -fx-font-size: 30px;
+    -fx-font-family: 'Comic Sans MS', 'Comic Neue', 'Chalkboard SE', cursive;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-background-color: radial-gradient(center 30% 30%, radius 150%, #FF4081, #FF80AB, #FFB6C1);
+    -fx-background-radius: 40px;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 5px;
+    -fx-border-radius: 40px;
+    -fx-padding: 35px;
+    -fx-effect: dropshadow(three-pass-box, #000, 20, 0.7, 5, 5);
+    -fx-animation: explode 2s ease-in-out infinite;
+    position: relative;
+}
+
+@keyframes explode {
+    0%, 100% {
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+        -fx-rotate: 0deg;
+    }
+    25% {
+        -fx-scale-x: 1.05;
+        -fx-scale-y: 0.95;
+        -fx-rotate: 2deg;
+    }
+    50% {
+        -fx-scale-x: 0.95;
+        -fx-scale-y: 1.05;
+        -fx-rotate: -2deg;
+    }
+    75% {
+        -fx-scale-x: 1.03;
+        -fx-scale-y: 0.97;
+        -fx-rotate: 1deg;
+    }
+}
+
+.question-text:after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -15px;
+    border-width: 10px 10px 0;
+    border-style: solid;
+    border-color: #FF4081 transparent;
+    -fx-effect: dropshadow(three-pass-box, #000, 10, 0.6, 2, 2);
+}
+
+/* Jumping Option Buttons */
+.option-button {
+    -fx-font-size: 15px;
+    -fx-font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #3F51B5, #5C6BC0, #9FA8DA);
+    -fx-background-radius: 70px;
+    -fx-padding: 30px 50px;
+    -fx-border-color: #00FFFF;
+    -fx-border-width: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 15, 0.4, 0, 8);
+    -fx-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.5);
+}
+
+.option-button:nth-child(1) {
+    -fx-animation: jump 4s ease-in-out infinite;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #FF5722, #FF8A65, #FFCCBC);
+}
+.option-button:nth-child(2) {
+    -fx-animation: jump 4s ease-in-out 0.3s infinite;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #4CAF50, #81C784, #C8E6C9);
+}
+.option-button:nth-child(3) {
+    -fx-animation: jump 4s ease-in-out 0.6s infinite;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #2196F3, #64B5F6, #BBDEFB);
+}
+.option-button:nth-child(4) {
+    -fx-animation: jump 4s ease-in-out 0.9s infinite;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #9C27B0, #BA68C8, #E1BEE7);
+}
+
+@keyframes jump {
+    0%, 100% { -fx-translate-y: 0; }
+    50% { -fx-translate-y: -30px; }
+}
+
+.option-button:hover {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #FFEB3B, #FFF176, #FFFF8D);
+    -fx-effect: dropshadow(three-pass-box, #FF00FF, 25, 0.8, 0, 12);
+    -fx-text-fill: #FF00FF;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+/* Rainbow Party Header */
+.game-header {
+    -fx-background-color: linear-gradient(to right, #FF0000, #FF7F00, #FFFF00, #00FF00, #0000FF, #4B0082, #9400D3);
+    -fx-background-radius: 0 0 20px 20px;
+    -fx-padding: 30px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 30, 0, 0, 20);
+    -fx-animation: rainbowRun 8s linear infinite, bounce 5s ease-in-out infinite;
+}
+
+@keyframes rainbowRun {
+    0% { -fx-background-position: 0% 50%; }
+    100% { -fx-background-position: 200% 50%; }
+}
+
+/* Celebration Badges */
+.score-label, .feedback-label {
+    -fx-font-size: 38px;
+    -fx-font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+    -fx-text-fill: white;
+    -fx-padding: 25px 45px;
+    -fx-background-radius: 60px;
+    -fx-border-radius: 60px;
+    -fx-border-width: 5px;
+    -fx-border-color: #FFD700;
+    -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #FF4081, #FF80AB, #FFB6C1);
+    -fx-effect: dropshadow(three-pass-box, #000000, 15, 0.7, 5, 5);
+    -fx-animation: party 1.5s ease-in-out infinite;
+}
+
+@keyframes party {
+    0%, 100% {
+        -fx-scale-x: 1;
+        -fx-scale-y: 1;
+        -fx-rotate: 0deg;
+    }
+    25% {
+        -fx-scale-x: 1.1;
+        -fx-scale-y: 0.9;
+        -fx-rotate: 5deg;
+        -fx-text-fill: #FFFF00;
+    }
+    50% {
+        -fx-scale-x: 0.9;
+        -fx-scale-y: 1.1;
+        -fx-rotate: -5deg;
+        -fx-text-fill: #00FFFF;
+    }
+    75% {
+        -fx-scale-x: 1.05;
+        -fx-scale-y: 0.95;
+        -fx-rotate: 3deg;
+        -fx-text-fill: #FF00FF;
+    }
+}
+
+/* Super Bouncy Action Buttons */
+.retry, .level-select {
+    -fx-font-size: 34px;
+    -fx-font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+    -fx-font-weight: bold;
+    -fx-padding: 30px 50px;
+    -fx-border-width: 5px;
+    -fx-border-color: #FF00FF;
+    -fx-background-radius: 30px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, #000, 15, 0.7, 0, 8);
+    -fx-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 2);
+}
+
+.retry {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #FF5722, #FF8A65, #FFCCBC);
+    -fx-animation: bounceIn 1s ease-in-out infinite;
+}
+.level-select {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #2196F3, #64B5F6, #BBDEFB);
+    -fx-animation: bounceIn 1s ease-in-out 0.2s infinite;
+}
+
+@keyframes bounceIn {
+    0%, 100% { -fx-scale-x: 1; -fx-scale-y: 1; }
+    50% { -fx-scale-x: 1.1; -fx-scale-y: 1.1; }
+}
+
+.retry:hover, .level-select:hover {
+    -fx-scale-x: 1.3;
+    -fx-scale-y: 1.3;
+    -fx-rotate: 8deg;
+    -fx-effect: dropshadow(three-pass-box, #FFEB3B, 30, 1, 0, 15);
+    -fx-text-fill: #FFFF00;
+    -fx-animation: none;
+}
+
+/* Special Effects */
+.correct-answer {
+    -fx-effect: dropshadow(three-pass-box, #4CAF50, 50, 1, 0, 0);
+    -fx-animation: celebrate 0.8s ease-in-out 3, flashGreen 0.5s 3;
+}
+
+.incorrect-answer {
+    -fx-effect: dropshadow(three-pass-box, #F44336, 50, 1, 0, 0);
+    -fx-animation: shake 0.8s ease-in-out 3, flashRed 0.5s 3;
+}
+
+@keyframes flashGreen {
+    0%, 100% { -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #4CAF50, #81C784, #C8E6C9); }
+    50% { -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #FFFFFF, #81C784, #FFFFFF); }
+}
+
+@keyframes flashRed {
+    0%, 100% { -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #F44336, #EF9A9A, #FFCDD2); }
+    50% { -fx-background-color: radial-gradient(center 50% 50%, radius 150%, #FFFFFF, #EF9A9A, #FFFFFF); }
+}

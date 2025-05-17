@@ -1,0 +1,121 @@
+/* === General View Styling === */
+.basic-view {
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-font-family: 'Baloo';
+}
+
+/* === Top Bar === */
+.top-bar {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* === Title Styling === */
+.welcome-title, .welcome-label {
+    -fx-font-size: 36px;
+    -fx-text-fill: #fff;
+    -fx-font-family: 'Baloo';
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, #ff69b4, 10, 0.5, 2, 2);
+}
+
+/* === Button Container === */
+.button-container {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-background-radius: 20px;
+    -fx-padding: 30px;
+    -fx-border-color: #fff176;
+    -fx-border-radius: 20px;
+    -fx-border-width: 3px;
+}
+
+/* === Play Button === */
+.play-button {
+    -fx-background-color: linear-gradient(to bottom, #faff72, #ffd740);
+    -fx-text-fill: #d43f8d;
+    -fx-font-size: 24px;
+    -fx-font-family: 'Baloo';
+    -fx-font-weight: bold;
+    -fx-background-radius: 40px;
+    -fx-padding: 16px 28px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 2);
+}
+
+.play-button:hover {
+    -fx-scale-x: 1.12;
+    -fx-scale-y: 1.12;
+    -fx-opacity: 0.95;
+    -fx-rotate: 2;
+}
+
+/* === Quit Button === */
+.quit-button {
+    -fx-background-color: linear-gradient(to bottom, #ff6a6a, #ff3c3c);
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-family: 'Baloo';
+    -fx-font-weight: bold;
+    -fx-background-radius: 40px;
+    -fx-padding: 16px 28px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 5, 0, 0, 2);
+}
+
+.quit-button:hover {
+    -fx-scale-x: 1.12;
+    -fx-scale-y: 1.12;
+    -fx-opacity: 0.95;
+    -fx-rotate: -2;
+}
+
+/* === Category Buttons === */
+.category-button {
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Baloo';
+    -fx-text-fill: white;
+    -fx-padding: 10px 30px;
+    -fx-background-radius: 40px;
+    -fx-background-color: linear-gradient(to bottom right, #a18cd1, #fbc2eb);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 6, 0, 0, 2);
+    -fx-min-width: 200px;
+}
+
+.category-button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(gaussian, yellow, 10, 0.7, 0, 2);
+    -fx-rotate: 3;
+}
+
+/* === Settings Button === */
+.settings-btn {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* === Back Button === */
+#back-icon {
+    -fx-font-size: 36px;
+    -fx-font-family: 'Baloo';
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff;
+    -fx-cursor: hand;
+    -fx-padding: 10px 25px;
+    -fx-background-color: linear-gradient(to bottom, #ffa502, #ffc107);
+    -fx-background-radius: 30px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 6, 0, 0, 2);
+}
+
+#back-icon:hover {
+    -fx-background-color: #ffd740;
+    -fx-text-fill: white;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-rotate: -2;
+}
+
+#back-icon:pressed {
+    -fx-background-color: #f3c623;
+    -fx-translate-y: 3px;
+}

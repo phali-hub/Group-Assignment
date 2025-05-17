@@ -1,0 +1,146 @@
+/* Basic View Container */
+.basic-view {
+    -fx-background-color: linear-gradient(to bottom, #FF9A8B, #FF6B95, #FF8E53);
+    -fx-background-repeat: repeat;
+    -fx-background-size: 200px 200px;
+}
+
+/* Top Bar - Rainbow Style */
+.top-bar {
+    -fx-background-color: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -fx-background-radius: 0 0 10px 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 5);
+    -fx-padding: 10px;
+}
+
+/* Back Button - Big Cartoon Arrow */
+#back-icon {
+    -fx-font-size: 48px;
+    -fx-font-family: 'Comic Sans MS';
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, #000000, 10, 0.5, 2, 2);
+    -fx-cursor: hand;
+    -fx-padding: 0 20px 5px 20px;
+    -fx-background-color: rgba(255, 105, 180, 0.7); /* Pink */
+    -fx-background-radius: 50px;
+    -fx-border-color: #FFD700;
+    -fx-border-width: 3px;
+    -fx-border-radius: 50px;
+}
+
+#back-icon:hover {
+    -fx-text-fill: #FFEB3B;
+    -fx-effect: dropshadow(three-pass-box, #FFD700, 15, 0.8, 0, 0);
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+    -fx-rotate: -10deg;
+    -fx-background-color: rgba(255, 20, 147, 0.8); /* Darker pink */
+}
+
+#back-icon:pressed {
+    -fx-text-fill: #FFFFFF;
+    -fx-effect: dropshadow(three-pass-box, #000000, 5, 0.5, 0, 1);
+    -fx-translate-y: 3px;
+}
+
+/* Welcome Label - Bouncing Text */
+.welcome-label {
+    -fx-font-size: 30px;
+    -fx-font-family: 'Comic Sans MS';
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, #000000, 10, 0.5, 5, 5);
+    -fx-padding: 20px 40px;
+    -fx-background-color: rgba(255, 215, 0, 0.7); /* Gold */
+    -fx-background-radius: 50px;
+    -fx-border-color: #FF1493; /* Deep pink */
+    -fx-border-width: 4px;
+    -fx-border-radius: 50px;
+    -fx-alignment: center;
+}
+
+/* Category Buttons - Cartoon Cloud Shapes */
+.category-button {
+    -fx-font-size: 28px;
+    -fx-font-family: 'Comic Sans MS';
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px 30px;
+    -fx-background-radius: 35px 5px 35px 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0.3, 0, 5);
+    -fx-min-width: 200px;
+    -fx-border-color: white;
+    -fx-border-width: 3px;
+    -fx-cursor: hand;
+    -fx-background-color: #3F51B5; /* Indigo */
+}
+
+.category-button:hover {
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 15, 0.5, 0, 5);
+    -fx-rotate: 5deg;
+    -fx-background-color: #5C6BC0; /* Lighter indigo */
+}
+
+/* Different colors for each category button */
+.category-button:nth-child(1) { /* Lilotho */
+    -fx-background-color: #4CAF50; /* Green */
+    -fx-text-fill: #FFEB3B; /* Yellow */
+    -fx-effect: dropshadow(three-pass-box, #4CAF50, 10, 0, 0, 5);
+}
+
+.category-button:nth-child(2) { /* Lipapali */
+    -fx-background-color: #FF5722; /* Deep orange */
+    -fx-text-fill: #00BCD4; /* Cyan */
+    -fx-effect: dropshadow(three-pass-box, #FF5722, 10, 0, 0, 5);
+}
+
+.category-button:nth-child(3) { /* Maele */
+    -fx-background-color: #9C27B0; /* Purple */
+    -fx-text-fill: #FFC107; /* Amber */
+    -fx-effect: dropshadow(three-pass-box, #9C27B0, 10, 0, 0, 5);
+}
+
+.category-button:nth-child(4) { /* Lits'omo */
+    -fx-background-color: #2196F3; /* Blue */
+    -fx-text-fill: #FF9800; /* Orange */
+    -fx-effect: dropshadow(three-pass-box, #2196F3, 10, 0, 0, 5);
+}
+
+.category-button:nth-child(5) { /* Moetlo */
+    -fx-background-color: #E91E63; /* Pink */
+    -fx-text-fill: #8BC34A; /* Light green */
+    -fx-effect: dropshadow(three-pass-box, #E91E63, 10, 0, 0, 5);
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 100% { -fx-translate-y: 0; }
+    50% { -fx-translate-y: -10; }
+}
+
+@keyframes wobble {
+    0%, 100% { -fx-rotate: 0; }
+    25% { -fx-rotate: 3deg; }
+    75% { -fx-rotate: -3deg; }
+}
+
+@keyframes pulse {
+    0%, 100% { -fx-scale-x: 1; -fx-scale-y: 1; }
+    50% { -fx-scale-x: 1.05; -fx-scale-y: 1.05; }
+}
+
+/* Apply animations */
+.welcome-label {
+    -fx-animation: bounce 2s infinite;
+}
+
+.category-button {
+    -fx-animation: wobble 3s infinite;
+}
+
+.category-button:hover {
+    -fx-animation: pulse 0.5s infinite;
+}
